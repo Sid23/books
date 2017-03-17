@@ -1,0 +1,17 @@
+<%= form_for @todo do |f| %>
+  <p>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %>
+  </p>
+    <%= f.label :author %> <br>
+    <%= f.text_field :author %>
+   <p>
+  </p>
+   <p>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
