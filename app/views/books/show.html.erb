@@ -1,0 +1,12 @@
+<h1>Showing a book</h1>
+<%= image_tag(@img) %>
+<p>
+    name: <%= @book.title %>
+</p>
+<p>
+    author: <%= @book.author %>
+</p>
+<p>
+    year: <%= @book.year %>
+</p>
+<p><%= link_to "Edit this book", edit_book_path(@book) %> | <%= link_to "Back to Home page", books_path() %></p>

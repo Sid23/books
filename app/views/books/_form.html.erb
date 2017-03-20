@@ -1,14 +1,24 @@
-<%= form_for @todo do |f| %>
+
+<!-- following code to show errors that prevent creating/updating of the record -->
+<% if @book.errors.any? %>
+<h2>There are some errors..</h2>
+<ul>
+  <% @book.errors.full_messages.each do |err| %>
+  <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
+<!-- form declaration -->
+<%= form_for @book do |f| %>
   <p>
     <%= f.label :title %> <br>
     <%= f.text_field :title %>
   </p>
     <%= f.label :author %> <br>
     <%= f.text_field :author %>
-   <p>
   </p>
    <p>
-    <%= f.label :year %>
+    <%= f.label :year %><br>
     <%= f.text_field :year %>
   </p>
   <p>
